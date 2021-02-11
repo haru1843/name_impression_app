@@ -34,5 +34,3 @@ Generate a NAME on the basis of the imporession.
 <p><img src="https://user-images.githubusercontent.com/31639255/107553126-b7e1ac80-6c17-11eb-8cac-ec9e9d0c2db0.png" alt="React logo" width="35vw"> <a href="https://reactjs.org/" style="font-size: 5vw">React</a>: A JavaScript library for building user interfaces.</p>
 
 <p><img src="https://user-images.githubusercontent.com/31639255/107553709-60900c00-6c18-11eb-884e-1b2d6f53117d.png" alt="App-Engine logo" width="33vw"> <a href="https://cloud.google.com/appengine/docs" style="font-size: 5vw">GAE</a>: GAE(Google App Engine) is a fully managed, serverless platform for developing and hosting web applications at scale.</p>
-
-
