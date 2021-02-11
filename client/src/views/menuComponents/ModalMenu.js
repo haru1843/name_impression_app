@@ -6,8 +6,6 @@ import styled from "styled-components";
 
 import { Transition } from "react-transition-group";
 
-import "./ModalMenu.scss";
-
 const LinkDiv = styled.div`
   margin-right: 0;
   margin-left: auto;
@@ -55,7 +53,20 @@ const LinkDiv = styled.div`
     width: 100%;
     margin: 0;
     padding-left: 5vw;
-    font-size: 4vw;
+    font-size: 4vh;
+
+    &::before {
+      position: relative;
+      bottom: 0.2vw;
+      content: "";
+      display: inline-block;
+      width: 7vh;
+      height: 7vh;
+      background: url(${process.env.PUBLIC_URL}/menu/right-arrow.svg) no-repeat;
+      background-size: contain;
+      vertical-align: middle;
+      margin-right: 4vh;
+    }
   }
 `;
 
