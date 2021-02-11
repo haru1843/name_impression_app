@@ -19,24 +19,24 @@ const LinkDiv = styled.div`
   height: calc(20% - 2px);
 
   &:nth-of-type(1) {
-    transition: all 0.32s ease;
-    transition-delay: calc(0.2s + 0ms);
+    transition: all 320ms ease;
+    transition-delay: calc(70ms + 0ms);
   }
   &:nth-of-type(2) {
-    transition: all 0.31s ease;
-    transition-delay: calc(0.2s + 50ms);
+    transition: all 310ms ease;
+    transition-delay: calc(70ms + 40ms);
   }
   &:nth-of-type(3) {
-    transition: all 0.3s ease;
-    transition-delay: calc(0.2s + 100ms);
+    transition: all 300ms ease;
+    transition-delay: calc(70ms + 80ms);
   }
   &:nth-of-type(4) {
-    transition: all 0.29s ease;
-    transition-delay: calc(0.2s + 150ms);
+    transition: all 290ms ease;
+    transition-delay: calc(70ms + 120ms);
   }
   &:nth-of-type(5) {
-    transition: all 0.28s ease;
-    transition-delay: calc(0.2s + 200ms);
+    transition: all 280ms ease;
+    transition-delay: calc(70ms + 160ms);
   }
   &:hover {
     transition: 0.1s;

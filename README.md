@@ -1,5 +1,5 @@
 <p align="center">
-  <a href="https://gin-generate-random-name.df.r.appspot.com/" rel="noopener" target="_blank"><img width="450" src="https://user-images.githubusercontent.com/31639255/107550423-5d931c80-6c14-11eb-90b8-2fdc5d301a02.png" alt="NameImpression logo"></a>
+  <a href="https://gin-generate-random-name.df.r.appspot.com/" rel="noopener" target="_blank"><img width="90%" src="https://user-images.githubusercontent.com/31639255/107550423-5d931c80-6c14-11eb-90b8-2fdc5d301a02.png" alt="NameImpression logo"></a>
 </p>
 
 
