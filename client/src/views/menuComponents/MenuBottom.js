@@ -3,6 +3,7 @@ import React from "react";
 import styled from "styled-components";
 
 const MenuBottonDiv = styled.div`
+  cursor: pointer;
   display: inline-block;
   transition: all 0.4s;
   box-sizing: border-box;

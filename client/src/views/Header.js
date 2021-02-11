@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 import styled from "styled-components";
 
-import MediaQuery from "react-responsive";
+import MediaQuery, { useMediaQuery } from "react-responsive";
 
 import MenuBottom from "./menuComponents/MenuBottom";
 
@@ -30,6 +30,11 @@ const HeaderStyle = styled.div`
 function Header(props) {
   const itemHeightRatio = 0.8;
   const itemHeight = props.headerHeight * itemHeightRatio;
+
+  if (props.isOpen & useMediaQuery({ query: "(min-width: 1000px)" })) {
+    props.toggleOpen();
+    console.log("hoge");
+  }
 
   return (
     <HeaderStyle id="header" h={props.headerHeight} itemHeight={itemHeight}>

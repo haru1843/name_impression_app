@@ -24,7 +24,11 @@ function Default() {
       {/* {isOpen && (
         <ModalMenu headerHeight={headerHeight} isOpen={isOpen}></ModalMenu>
       )} */}
-      <ModalMenu headerHeight={headerHeight} isOpen={isOpen}></ModalMenu>
+      <ModalMenu
+        headerHeight={headerHeight}
+        isOpen={isOpen}
+        closeMenu={() => setOpen(false)}
+      ></ModalMenu>
 
       <main style={styles.main}>
         <Switch>
