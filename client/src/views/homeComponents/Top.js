@@ -2,8 +2,6 @@ import React from "react";
 
 import styled from "styled-components";
 
-import "./slides.scss";
-
 const HomeTop = styled.div`
   height: ${(styleProps) => styleProps.h}px;
   width: 100%;
