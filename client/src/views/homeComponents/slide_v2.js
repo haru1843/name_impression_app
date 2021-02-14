@@ -5,7 +5,7 @@ import LinkButton from "./linkButton";
 
 const StyledDiv = styled.div`
   display: grid;
-  grid-template-columns: 45% 55%;
+  grid-template-columns: 55% 45%;
   grid-template-rows: 100%;
 
   height: ${(props) => props.height}px;
@@ -14,7 +14,7 @@ const StyledDiv = styled.div`
   padding: 0;
   background: ${(props) => props.bgc};
 
-  & > div:nth-of-type(1) {
+  & > div:nth-of-type(2) {
     position: relative;
 
     & > img {
@@ -27,8 +27,8 @@ const StyledDiv = styled.div`
       transform: translate(-50%, -50%);
     }
   }
-  & > div:nth-of-type(2) {
-    padding-right: 10%;
+  & > div:nth-of-type(1) {
+    padding-left: 10%;
 
     & > p.title {
       font-size: 1.2rem;
@@ -45,12 +45,9 @@ const StyledDiv = styled.div`
   }
 `;
 
-function SlideV1(props) {
+function SlideV2(props) {
   return (
     <StyledDiv height={props.height} bgc={props.bgc}>
-      <div>
-        <img alt="サービスのイメージ" src={props.imgSrc}></img>
-      </div>
       <div>
         <div className="top-pad"></div>
         <p className="title">{props.title}</p>
@@ -59,8 +56,11 @@ function SlideV1(props) {
           <LinkButton></LinkButton>
         </div>
       </div>
+      <div>
+        <img alt="サービスのイメージ" src={props.imgSrc}></img>
+      </div>
     </StyledDiv>
   );
 }
 
-export default SlideV1;
+export default SlideV2;
