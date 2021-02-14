@@ -49,7 +49,6 @@ const footerHeight = 80;
 const styles = {
   main: {
     marginTop: headerHeight,
-    height: 2000,
   },
   footer: {
     height: footerHeight,
