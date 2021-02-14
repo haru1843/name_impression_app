@@ -42,7 +42,8 @@ const HomeTop = styled.div`
         font-family: "M PLUS 1p";
         font-weight: 900;
         text-align: left;
-        color: rgb(40, 40, 40);
+        color: rgb(249, 249, 249);
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 
         grid-area: g0;
         position: absolute;

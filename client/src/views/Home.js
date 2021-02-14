@@ -14,6 +14,7 @@ function Home() {
         imgSrc={`${process.env.PUBLIC_URL}/home/undraw_File_searching_re_3evy.svg`}
         title={"名前検索"}
         msg={msg_for_search}
+        linkPath={"/search"}
       ></SlideV1>
       <SlideV2
         height={slidesHeight}
@@ -21,6 +22,7 @@ function Home() {
         imgSrc={`${process.env.PUBLIC_URL}/home/undraw_ideas_s70l.svg`}
         title={"名前生成"}
         msg={msg_for_search}
+        linkPath={"/generate"}
       ></SlideV2>
       <SlideV1
         height={slidesHeight}
@@ -28,6 +30,7 @@ function Home() {
         imgSrc={`${process.env.PUBLIC_URL}/home/undraw_folder_files_nweq.svg`}
         title={"ランダム取得"}
         msg={msg_for_search}
+        linkPath={"/random"}
       ></SlideV1>
       <SlideV2
         height={slidesHeight}
@@ -35,6 +38,7 @@ function Home() {
         imgSrc={`${process.env.PUBLIC_URL}/home/undraw_percentages_0rur.svg`}
         title={"印象判断"}
         msg={msg_for_search}
+        linkPath={"/judge"}
       ></SlideV2>
     </div>
   );

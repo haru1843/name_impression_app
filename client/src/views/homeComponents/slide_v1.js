@@ -56,7 +56,7 @@ function SlideV1(props) {
         <p className="title">{props.title}</p>
         <p className="desc">{props.msg}</p>
         <div className="button-wrapper">
-          <LinkButton></LinkButton>
+          <LinkButton linkPath={props.linkPath}></LinkButton>
         </div>
       </div>
     </StyledDiv>

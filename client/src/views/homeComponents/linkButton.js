@@ -71,7 +71,7 @@ const StyledDiv = styled.div`
 function LinkButton(props) {
   return (
     <StyledDiv className={props.className}>
-      <Link to="/search">
+      <Link to={props.linkPath}>
         <span>使ってみる</span>
         <svg viewBox="0 0 492.004 492.004">
           <g>
@@ -84,10 +84,6 @@ function LinkButton(props) {
             />
           </g>
         </svg>
-        {/* <img
-          alt="右矢印の画像"
-          src={`${process.env.PUBLIC_URL}/home/linkButton/right-arrow.svg`}
-        ></img> */}
       </Link>
     </StyledDiv>
   );
