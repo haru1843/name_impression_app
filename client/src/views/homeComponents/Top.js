@@ -65,8 +65,8 @@ const HomeTop = styled.div`
       font-size: 3vw;
       color: rgb(110, 110, 110);
       text-align: right;
-      font-family: "Imprima", sans-serif;
-      font-weight: 200;
+      font-family: "Amatic SC", cursive;
+      font-weight: 100;
     }
   }
 `;

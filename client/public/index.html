@@ -34,7 +34,7 @@
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css2?family=Imprima&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap"
       rel="stylesheet"
     />
     <title>React App</title>
@@ -54,3 +54,11 @@
     -->
   </body>
 </html>
+
+<style>
+  body {
+    /* 16px @ 768px increasing to 24px @ 1920px */
+    font-size: clamp(16px, calc(1rem + ((1vw - 7.68px) * 0.6944)), 24px);
+    min-height: 0vw;
+  }
+</style>
