@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
 
 // at views
@@ -12,6 +12,10 @@ import Footer from "./Footer";
 function Default() {
   const [isOpen, setOpen] = useState(false);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <div>
       <Header
@@ -19,17 +23,11 @@ function Default() {
         isOpen={isOpen}
         toggleOpen={() => setOpen(!isOpen)}
       />
-
-      {/* {isOpen && <div id="menu-modal">hoge</div>} */}
-      {/* {isOpen && (
-        <ModalMenu headerHeight={headerHeight} isOpen={isOpen}></ModalMenu>
-      )} */}
       <ModalMenu
         headerHeight={headerHeight}
         isOpen={isOpen}
         closeMenu={() => setOpen(false)}
       ></ModalMenu>
-
       <main style={styles.main}>
         <Switch>
           <Route exact path="/" component={Home} />
