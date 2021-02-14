@@ -17,9 +17,23 @@ function Home() {
       ></SlideV1>
       <SlideV2
         height={slidesHeight}
+        bgc={evenColor}
+        imgSrc={`${process.env.PUBLIC_URL}/home/undraw_ideas_s70l.svg`}
+        title={"名前生成"}
+        msg={msg_for_search}
+      ></SlideV2>
+      <SlideV1
+        height={slidesHeight}
         bgc={oddColor}
-        imgSrc={`${process.env.PUBLIC_URL}/home/undraw_File_searching_re_3evy.svg`}
-        title={"名前検索"}
+        imgSrc={`${process.env.PUBLIC_URL}/home/undraw_folder_files_nweq.svg`}
+        title={"ランダム取得"}
+        msg={msg_for_search}
+      ></SlideV1>
+      <SlideV2
+        height={slidesHeight}
+        bgc={evenColor}
+        imgSrc={`${process.env.PUBLIC_URL}/home/undraw_percentages_0rur.svg`}
+        title={"印象判断"}
         msg={msg_for_search}
       ></SlideV2>
     </div>
@@ -28,6 +42,7 @@ function Home() {
 
 const slidesHeight = 940;
 const oddColor = "rgb(250,250,250)";
+const evenColor = "rgb(240,240,240)";
 
 const msg_for_search = (
   <p>
