@@ -28,14 +28,19 @@ const StyledDiv = styled.div`
     }
   }
   & > div:nth-of-type(2) {
+    padding-right: 10%;
+
     & > p.title {
-      font-size: 2.5vw;
+      font-size: 1.2rem;
     }
     & > p.desc {
-      font-size: 1.5vw;
+      font-size: 1rem;
     }
     & > div.top-pad {
       height: 20%;
+    }
+    & > div.button-wrapper {
+      text-align: right;
     }
   }
 `;
@@ -49,15 +54,10 @@ function SlideV1(props) {
       <div>
         <div className="top-pad"></div>
         <p className="title">{props.title}</p>
-        <p className="desc">
-          データにある名前から,
-          「文字」と「印象」の2つの方法で名前を探すことができます。
-          <br />
-          「文字」では入力した文字に対して検索を行います。
-          <br />
-          「印象」では各印象値を設定することで検索します。
-        </p>
-        <LinkButton></LinkButton>
+        <p className="desc">{props.msg}</p>
+        <div className="button-wrapper">
+          <LinkButton></LinkButton>
+        </div>
       </div>
     </StyledDiv>
   );

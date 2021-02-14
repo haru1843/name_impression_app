@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 import Top from "./homeComponents/Top";
 import SlideV1 from "./homeComponents/slide_v1";
@@ -13,20 +12,24 @@ function Home() {
         bgc={oddColor}
         imgSrc={`${process.env.PUBLIC_URL}/home/undraw_File_searching_re_3evy.svg`}
         title={"名前検索"}
+        msg={msg_for_search}
       ></SlideV1>
-
-      <p>at 'Home'!!</p>
-      <p>
-        <Link to="/">Home</Link>
-      </p>
-      <p>
-        <Link to="/search">Search</Link>
-      </p>
     </div>
   );
 }
 
-const slidesHeight = 680;
+const slidesHeight = 940;
 const oddColor = "rgb(250,250,250)";
+
+const msg_for_search = (
+  <p>
+    データにある名前から,
+    「文字」と「印象」の2つの方法で名前を探すことができます。
+    <br />
+    「文字」では入力した文字に対して検索を行います。
+    <br />
+    「印象」では各印象値を設定することで検索します。
+  </p>
+);
 
 export default Home;
