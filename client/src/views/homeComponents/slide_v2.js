@@ -31,9 +31,14 @@ const StyledDiv = styled.div`
     padding-left: 10%;
 
     & > p.title {
-      font-size: 1.2rem;
+      font-family: "M PLUS 1p", sans-serif;
+      font-size: 2rem;
+      color: rgb(60, 60, 60);
+      font-weight: 700;
+      border-bottom: 1px solid rgb(160, 160, 160);
     }
     & > p.desc {
+      padding-left: 2rem;
       font-size: 1rem;
     }
     & > div.top-pad {
