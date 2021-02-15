@@ -49,14 +49,14 @@ const oddColor = "rgb(250,250,250)";
 const evenColor = "rgb(240,240,240)";
 
 const msg_for_search = (
-  <p>
+  <span>
     データにある名前から,
     「文字」と「印象」の2つの方法で名前を探すことができます。
     <br />
     「文字」では入力した文字に対して検索を行います。
     <br />
     「印象」では各印象値を設定することで検索します。
-  </p>
+  </span>
 );
 
 export default Home;
