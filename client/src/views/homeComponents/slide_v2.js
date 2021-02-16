@@ -4,9 +4,7 @@ import styled from "styled-components";
 import LinkButton from "./linkButton";
 
 const StyledDiv = styled.div`
-  display: grid;
-  grid-template-columns: 55% 45%;
-  grid-template-rows: 100%;
+  position: relative;
 
   height: ${(props) => props.height}px;
   width: 100%;
@@ -14,23 +12,27 @@ const StyledDiv = styled.div`
   padding: 0;
   background: ${(props) => props.bgc};
 
-  & > div:nth-of-type(2) {
-    position: relative;
+  & > img {
+    width: 35%;
 
-    & > img {
-      width: 60%;
-
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-      transform: translate(-50%, -50%);
-    }
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
   }
+
   & > div:nth-of-type(1) {
-    padding-left: 10%;
+    width: 50%;
+
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 
     & > p.title {
+      margin: 0;
       font-family: "M PLUS 1p", sans-serif;
       font-size: 2rem;
       color: rgb(60, 60, 60);
@@ -38,11 +40,9 @@ const StyledDiv = styled.div`
       border-bottom: 1px solid rgb(160, 160, 160);
     }
     & > p.desc {
+      margin: 4% 0 7%;
       padding-left: 2rem;
       font-size: 1rem;
-    }
-    & > div.top-pad {
-      height: 20%;
     }
     & > div.button-wrapper {
       text-align: right;
@@ -61,9 +61,7 @@ function SlideV2(props) {
           <LinkButton linkPath={props.linkPath}></LinkButton>
         </div>
       </div>
-      <div>
-        <img alt="サービスのイメージ" src={props.imgSrc}></img>
-      </div>
+      <img alt="サービスのイメージ" src={props.imgSrc}></img>
     </StyledDiv>
   );
 }
