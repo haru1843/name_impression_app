@@ -4,7 +4,13 @@ import Top from "./homeComponents/Top";
 import SlideV1 from "./homeComponents/slide_v1";
 import SlideV2 from "./homeComponents/slide_v2";
 
+import GetWindowSize from "./listeners/resize";
+
 function Home() {
+  const { width } = GetWindowSize();
+
+  const slidesHeight = (width / 1920) * (1080 * 0.9);
+
   return (
     <div>
       <Top bgc="rgb(225, 225, 225)" h={slidesHeight} />
@@ -44,7 +50,7 @@ function Home() {
   );
 }
 
-const slidesHeight = 940;
+// const slidesHeight = 940;
 const oddColor = "rgb(250,250,250)";
 const evenColor = "rgb(240,240,240)";
 
