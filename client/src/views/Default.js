@@ -7,6 +7,7 @@ import Home from "./Home";
 import Search from "./Search";
 import Header from "./Header";
 import ModalMenu from "./menuComponents/ModalMenu";
+import NotFound from "./NotFound";
 import Footer from "./Footer";
 
 function Default() {
@@ -32,7 +33,16 @@ function Default() {
         <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/search" component={Search} />
-          <Route render={() => <p>not found!.</p>} />
+          {/* <Route render={() => <p>not found!.</p>} /> */}
+          {/* <Route component={NotFound} /> */}
+          <Route
+            render={() => (
+              <NotFound
+                headerHeight={headerHeight}
+                footerHeight={footerHeight}
+              ></NotFound>
+            )}
+          />
         </Switch>
       </main>
       <Footer h={footerHeight} />
