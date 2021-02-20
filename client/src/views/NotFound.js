@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import LinkButton from "./homeComponents/linkButton";
-
 import GetWindowSize from "./listeners/resize";
 
 const StyledDiv = styled.div`
@@ -62,14 +60,10 @@ const StyledDiv = styled.div`
 function NotFound(props) {
   const { height } = GetWindowSize();
 
-  //   const slideHeight = (width / 1920) * (1080 * 0.9);
-  //   const slideHeight = Math.max(height, 900);
   const slideHeight = Math.max(
     height - (props.headerHeight + props.footerHeight),
     450
   );
-
-  const bgc = "rgb(240, 240, 240)";
 
   return (
     <StyledDiv height={slideHeight}>
