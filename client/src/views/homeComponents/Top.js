@@ -39,7 +39,7 @@ const HomeTop = styled.div`
       grid-area: g1;
 
       p {
-        font-family: "M PLUS 1p";
+        font-family: "M PLUS 1p", sans-serif;
         font-weight: 900;
         text-align: left;
         color: rgb(249, 249, 249);
