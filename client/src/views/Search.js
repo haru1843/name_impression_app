@@ -74,7 +74,7 @@ const SearchBox = styled.div`
           opacity: 1;
         }
         &:nth-of-type(2) {
-          display: none;
+          opacity: 0;
         }
       }
       & > div.content {
@@ -88,12 +88,9 @@ const SearchBox = styled.div`
 
       & > div.tab {
         &:nth-of-type(1) {
-          /* visibility: hidden; */
-          display: none;
+          opacity: 0;
         }
         &:nth-of-type(2) {
-          position: relative;
-          left: 50%;
           opacity: 1;
         }
       }
@@ -116,7 +113,17 @@ function Search() {
           <div className="tab" onClick={() => setFlipState(true)}>
             tab
           </div>
-          <div className="content">slide1.</div>
+          <div className="content">
+            <div>
+              <input type="radio" name="search-method" />
+              <label>前方一致で検索</label>
+            </div>
+            <div>
+              <input type="radio" name="search-method" />
+              <label>部分一致で検索</label>
+            </div>
+            <input type="search" maxlength="10" pattern="[\u3041-\u3096]*" />
+          </div>
         </div>
         <div className={"box " + (fliped ? "active" : "disactive")}>
           <div className="tab" onClick={() => setFlipState(false)}>
