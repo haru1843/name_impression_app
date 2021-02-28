@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 const StyledDiv = styled.div`
@@ -12,7 +12,7 @@ const SearchBox = styled.div`
   width: 100%;
 
   & > div.box {
-    transition: ease 1s;
+    /* transition: ease 1s; */
     position: absolute;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -36,6 +36,8 @@ const SearchBox = styled.div`
 
       border-top-left-radius: 0.5rem;
       border-top-right-radius: 0.5rem;
+
+      user-select: none;
     }
     & > div.content {
       border-radius: 0.5rem;
@@ -72,7 +74,7 @@ const SearchBox = styled.div`
           opacity: 1;
         }
         &:nth-of-type(2) {
-          opacity: 0;
+          display: none;
         }
       }
       & > div.content {
@@ -86,9 +88,12 @@ const SearchBox = styled.div`
 
       & > div.tab {
         &:nth-of-type(1) {
-          opacity: 0;
+          /* visibility: hidden; */
+          display: none;
         }
         &:nth-of-type(2) {
+          position: relative;
+          left: 50%;
           opacity: 1;
         }
       }
@@ -100,18 +105,27 @@ const SearchBox = styled.div`
 `;
 
 function Search() {
+  const [fliped, setFlipState] = useState(false);
   return (
     <StyledDiv>
       <SearchBox>
-        <div className="box disactive">
-          <div className="tab">tab</div>
-          <div className="tab">tab</div>
-          <div className="content">main</div>
+        <div className={"box " + (!fliped ? "active" : "disactive")}>
+          <div className="tab" onClick={() => setFlipState(false)}>
+            tab
+          </div>
+          <div className="tab" onClick={() => setFlipState(true)}>
+            tab
+          </div>
+          <div className="content">slide1.</div>
         </div>
-        <div className="box active">
-          <div className="tab">tab</div>
-          <div className="tab">tab</div>
-          <div className="content">main</div>
+        <div className={"box " + (fliped ? "active" : "disactive")}>
+          <div className="tab" onClick={() => setFlipState(false)}>
+            tab
+          </div>
+          <div className="tab" onClick={() => setFlipState(true)}>
+            tab
+          </div>
+          <div className="content">fliped! slide2.</div>
         </div>
       </SearchBox>
     </StyledDiv>
